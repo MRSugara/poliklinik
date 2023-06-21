@@ -39,7 +39,7 @@
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->role }}</td>
                     <td>
-                        <a role="button" href="#">Edit</a>
+                        <a role="button" href="{{ route('user.edit', ['id' => $user->id]) }}">Edit</a>
 
                         <form action="{{ route('user.destroy', ['id' => $user->id]) }}" method="post">
                             @csrf
